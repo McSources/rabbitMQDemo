@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: springboot-rabbitmq
+  rabbitmq:
+    username: admin
+    password: 123
+    virtual-host: /
+    host: 172.22.234.51
+    port: 5672
+    publisher-confirm-type: correlated
+    publisher-returns: true
+    listener:
+      simple:
+        acknowledge-mode: auto
+    addresses: amqp://admin:123@172.22.58.105/ems
